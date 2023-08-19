@@ -2,9 +2,8 @@ from aiogram import Router
 
 
 def setup_routers() -> Router:
-    from .users import start, echo
-    from .errors import error_handler
-    
+    from . import start, error_handler, echo
+
     router = Router()
     router.include_router(start.router)
     router.include_router(echo.router)
